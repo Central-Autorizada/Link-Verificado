@@ -1,0 +1,29 @@
+8h da manha - verificar campanhas que tiveram venda - dobra orçamento
+fazer isso até meio dia
+de 11:30 até 12h vai olhar os que não tiveram venda e desabilitar os que não tiveram nada
+
+
+poremmm somente se tiver acima de 30% de venda com relação ao numero de campanhas
+se nao tiver os 30% de vendas > deixa rodando até bater os 30% ou até 16h
+
+não teve venda até 16h independente de qualquer coisa = mata
+
+pros conjuntos que tiveram 1 venda, verificar o custo medio por resultado > deixar rodar até o cpr médio + 40%, passou disso = corta
+
+
++ de 2 vendas deixa rodando até 57/59 de cpr, passou disso e nao teve mais venda = corta
+
+só duplicar orçamento até 20h da noite, dps disso mantem orçamento
+
+
+
+
+
+
+
+
+
+
+
+
+
