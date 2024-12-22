@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionamento WhatsApp</title>
+    <script>
+        // Array com até 10 números de WhatsApp
+        let numerosWhatsApp = [
+            '5511999999999', // Número 1
+            '5511888888888', // Número 2
+            '5511777777777', // Número 3
+            '5511666666666', // Número 4
+            '5511555555555', // Número 5
+            '5511444444444', // Número 6
+            '5511333333333', // Número 7
+            '5511222222222', // Número 8
+            '5511111111111', // Número 9
+            '5511000000000'  // Número 10
+        ];
+
+        // Função para redirecionar automaticamente
+        function redirecionarWhats() {
+            // Recupera o contador do localStorage (se existir), senão começa do 0
+            let contador = parseInt(localStorage.getItem('contador')) || 0;
+
+            // Ignora números vazios
+            while (numerosWhatsApp[contador] === '' && contador < numerosWhatsApp.length) {
+                contador++;
+            }
+
+            // Se houver números válidos, redireciona
+            if (contador < numerosWhatsApp.length) {
+                // Redireciona para o próximo número
+                window.location.href = `https://wa.me/${numerosWhatsApp[contador]}`;
+                
+                // Avança para o próximo número e salva no localStorage
+                contador = (contador + 1) % numerosWhatsApp.length;
+                localStorage.setItem('contador', contador);
+            }
+        }
+
+        // Redireciona automaticamente assim que a página for carregada
+        window.onload = function() {
+            redirecionarWhats();
+        };
+    </script>
+</head>
+
+</html>
