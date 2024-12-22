@@ -12,6 +12,9 @@
             '5522999227742'  // Número 3
         ];
 
+        // Texto da mensagem pré-preenchida
+        let mensagem = "Oii%2C%20tudo%20bem%3F"; // "Oii, tudo bem?"
+
         // Função para redirecionar automaticamente
         function redirecionarWhats() {
             // Recupera o contador do localStorage (se existir), senão começa do 0
@@ -24,8 +27,8 @@
 
             // Se houver números válidos, redireciona
             if (contador < numerosWhatsApp.length) {
-                // Redireciona para o próximo número
-                window.location.href = `https://wa.me/${numerosWhatsApp[contador]}`;
+                // Redireciona para o próximo número com a mensagem
+                window.location.href = `https://wa.me/${numerosWhatsApp[contador]}?text=${mensagem}`;
                 
                 // Avança para o próximo número e salva no localStorage
                 contador = (contador + 1) % numerosWhatsApp.length;
